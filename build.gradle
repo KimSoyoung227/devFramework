@@ -19,11 +19,18 @@ repositories {
 }
 
 dependencies {
+	//기본 의존성
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	
+	//JSP 사용시
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper' //내장톰캣 관련
+	implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0' //스프링부트 3.0 이상
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0' //스프링부트 3.0 이상
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1' //Error 스프링부트 3.0 이상
 }
 
 tasks.named('test') {

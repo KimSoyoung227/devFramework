@@ -12,13 +12,13 @@ public class MainController {
 	@GetMapping("/")
 	public String main(Model model) {
 		model.addAttribute("data", "data1");
-		return "index.html";
+		return "index";
 	}
 	
 	@GetMapping("/home")
 	public String home(Model model) {
 		model.addAttribute("data", "data2");
-		return "home.html";
+		return "/home/home";
 	}
 
 }
